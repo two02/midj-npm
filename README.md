@@ -87,7 +87,7 @@ const response = await midj.generate('Hello, world!');
 if (response.error) {
   console.error('Error:', response.error);
 } else {
-  console.log('Generated Content:', response.data);
+  console.log('Generated Content:', response);
 }
 ```
 
