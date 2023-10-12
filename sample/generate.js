@@ -1,9 +1,17 @@
 const MIDJ = require("@twozerotwo/midj");
 
-const mdj = new MIDJ({
-  authorization: "YOUR_AUTHORIZATION_TOKEN",
+const midj = new MIDJ({
+  authorization: "",
 });
 
-mdj.generate("a bear eating pickle").then((response) => {
-  console.log(response);
-});
+const main = async () => {
+  const response = await midj.generate("Hello, world!");
+
+  if (response.error) {
+    console.error("Error:", response.error);
+  } else {
+    console.log("Generated Content:", response);
+  }
+};
+
+main();
