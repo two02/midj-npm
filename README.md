@@ -16,8 +16,6 @@ To install the MIDJ module:
 npm install @twozerotwo/midj
 ```
 
-> Note: Replace `@twozerotwo/midj` with the actual name you will publish it under.
-
 ## Usage
 
 Start by importing and initializing the MIDJ class:
