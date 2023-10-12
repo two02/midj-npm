@@ -2,6 +2,9 @@
 
 The MIDJ module provides a simple and efficient way to interact with the MIDJ API. Utilize the power of MIDJ with just a few lines of code in your Node.js application.
 
+## Prerequisites
+
+To use this module, you need to have a [midj.app subscription](https://midj.app/pricing).
 ## Features
 - Generate content with `generate` method.
 - Fetch content using the trigger ID with `getByTrigger` method.
