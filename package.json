@@ -4,6 +4,7 @@
   "description": "This is NPM package for the midj.app",
   "main": "midj.js",
   "dependencies": {
+    "@twozerotwo/midj": "^1.0.0",
     "asynckit": "^0.4.0",
     "axios": "^1.5.1",
     "combined-stream": "^1.0.8",
