@@ -125,7 +125,7 @@ class MIDJ {
       );
       return response.data;
     } catch (error) {
-      return { error: error.message };
+      return { status: error.response.status, error: error.response.data };
     }
   }
 
@@ -146,7 +146,7 @@ class MIDJ {
       );
       return response.data;
     } catch (error) {
-      return { error: error.message };
+      return { status: error.response.status, error: error.response.data };
     }
   }
 }
