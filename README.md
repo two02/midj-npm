@@ -94,7 +94,7 @@ Generate a variation of content:
 
 ```javascript
 
-midj.generateVariation(0, trigger_id_here, 'msg_hash_here').then(console.log);
+midj.generateVariation(1, trigger_id_here, 'msg_hash_here').then(console.log);
 
 ```
 
@@ -110,7 +110,7 @@ Upscale an image:
 
 ```javascript
 
-midj.upscaleImage(0, trigger_id_here, 'msg_hash_here').then(console.log);
+midj.upscaleImage(1, trigger_id_here, 'msg_hash_here').then(console.log);
 
 ```
 
@@ -141,7 +141,7 @@ Generate a variation of content:
 
 ```javascript
 
-midj.PregenerateVariation(0, trigger_id_here, 'msg_hash_here').then(console.log);
+midj.PregenerateVariation(1, trigger_id_here, 'msg_hash_here').then(console.log);
 
 ```
 
@@ -157,7 +157,7 @@ Upscale an image:
 
 ```javascript
 
-midj.PreupscaleImage(0, trigger_id_here, 'msg_hash_here').then(console.log);
+midj.PreupscaleImage(1, trigger_id_here, 'msg_hash_here').then(console.log);
 
 ```
 
