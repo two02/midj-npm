@@ -28,6 +28,25 @@ class MIDJ {
     }
   }
 
+  async Pregenerate(prompt) {
+    try {
+      const response = await axios.post(
+        `${this.baseURL}/pre/generate`,
+        {
+          prompt,
+        },
+        {
+          headers: {
+            Authorization: this.authorization,
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      return { status: error.response.status, error: error.response.data };
+    }
+  }
+
   async getByTrigger(trigger_id) {
     try {
       const response = await axios.post(
@@ -43,7 +62,7 @@ class MIDJ {
       );
       return response.data;
     } catch (error) {
-      return { error: error.message };
+      return { status: error.response.status, error: error.response.data };
     }
   }
 
@@ -64,7 +83,28 @@ class MIDJ {
       );
       return response.data;
     } catch (error) {
-      return { error: error.message };
+      return { status: error.response.status, error: error.response.data };
+    }
+  }
+
+  async PregenerateVariation(index, trigger_id, msg_hash) {
+    try {
+      const response = await axios.post(
+        `${this.baseURL}/pre/variation`,
+        {
+          index,
+          trigger_id,
+          msg_hash,
+        },
+        {
+          headers: {
+            Authorization: this.authorization,
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      return { status: error.response.status, error: error.response.data };
     }
   }
 
@@ -85,7 +125,28 @@ class MIDJ {
       );
       return response.data;
     } catch (error) {
-      return { error: error.message };
+      return { status: error.response.status, error: error.response.data };
+    }
+  }
+
+  async PreupscaleImage(index, trigger_id, msg_hash) {
+    try {
+      const response = await axios.post(
+        `${this.baseURL}/pre/upscale`,
+        {
+          index,
+          trigger_id,
+          msg_hash,
+        },
+        {
+          headers: {
+            Authorization: this.authorization,
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      return { status: error.response.status, error: error.response.data };
     }
   }
 }
